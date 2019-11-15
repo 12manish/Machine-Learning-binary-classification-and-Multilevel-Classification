@@ -1,8 +1,9 @@
 # Machine-Learning-binary-classification-and-Multilevel-Classification
-: Binary Classification 
-For this problem, we will use a subset of the Wisconsin Breast Cancer dataset
+## Binary Classification 
+For this problem, we will use a subset of the Wisconsin Breast Cancer dataset.For filling any feature, we can use r mean or median value of the feature values from observed entries. I have choose here median because I feel median imputation will work better because it is a number that is already present in the data set and is less susceptible to outlier errors as compared to mean imputation. Filled missing values with median because of good outliers.Used the best alpha and lambda parameter to re-train our final L1 and L2 regularized model. Evaluated the prediction performance on the test data. 
 
-Multilevel Classification:
+## Multilevel Classification:
 created a default One-vs-Rest Classifier.Used the data reduced_mnist.csv.Splited the data into 70% training data and 30% test data. Fit a One-vs-Rest Classifier (which uses Logistic regression classifier with alpha=1) on training data, and report accuracy, precision, recall on testing data.Choosed the best value of alpha from the set a={0.1, 1, 3, 10, 33, 100, 333, 1000, 3333, 10000, 33333} by observing average training and validation performance P.Used the best alpha and all training data to build the final model and then evaluate the prediction performance on test data.
 
-#Discuss if there is any sign of underfitting or overfitting with appropriate reasoning
+## Discuss if there is any sign of underfitting or overfitting with appropriate reasoning
+Over fitting means that our trained model is not generalizing enough. Our model can give us excellent predictions for our training data, but can give us poor predictions for any data never seen before during training. Under fitting is the opposite. Our model is generalizing too much to the point that it gives poor predictions even if you used our training data. The trick is to balance between them. We need to generate a model that gives good results when we use our training data and also gives good predictions for any data never seen before during training. As our model accuracy is good for test data so there is no sign of under fitting and overfitting.
